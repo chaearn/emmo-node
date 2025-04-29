@@ -10,7 +10,7 @@ function tipsCard({
   subtitle = 'Why Positivity Can Sometimes Hurts',
   quote = '“That sounds hard. I’m here if you need me.”',
   quoteColor,
-//   quoteMarkColor,
+  quoteMarkColor,
   startColor,
   endColor,
   ctaLabel = 'Save this tip',
@@ -21,7 +21,7 @@ function tipsCard({
     body: quoteBox({ 
       quote, 
       quoteColor: quoteColor || COLORS.brand, 
-    //   quoteMarkColor: quoteMarkColor || COLORS.kind, 
+      quoteMarkColor: quoteMarkColor || COLORS.kind, 
       startColor: startColor || COLORS.light, 
       endColor: endColor || COLORS.light 
     }),

@@ -1,5 +1,7 @@
 // adapters/line/events/handlePostback.js
 const axios = require('axios');
+const { singleBubble, tipsCard } = require('../../../services/flex');
+
 const { buildLessonCarousel } = require('../../../services/flex-builder');
 const { createClient } = require('@supabase/supabase-js');
 
@@ -54,6 +56,14 @@ module.exports = async function handlePostback(event) {
   }
   
   if (data === 'lesson1') {
+    const tipsBubble = singleBubble(
+      tipsCard({
+        title, subtitle,
+        quote: '“That sounds hard. I’m here if you need me.”',
+        quoteColor, quoteMarkColor, startColor, endColor, ctaLabel, ctaData
+      })
+    );
+
     try {
       // ข้อความต้อนรับก่อน carousel
       await axios.post('https://api.line.me/v2/bot/message/push', {
@@ -69,15 +79,17 @@ module.exports = async function handlePostback(event) {
         }
       });
 
+      // Bubble Tips
       await axios.post('https://api.line.me/v2/bot/message/push', {
         to: userId,
-        messages: [tipsCard]
+        messages: [tipsBubble]
       }, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${process.env.LINE_CHANNEL_ACCESS_TOKEN}`
         }
       });
+
 
       console.log('📩 Replied to Start postback with Level + Carousel');
     } catch (error) {
