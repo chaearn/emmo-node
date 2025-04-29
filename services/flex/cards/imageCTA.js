@@ -11,7 +11,7 @@ const { bubble, image, box, titleText, bodyText, ctaButton } = require('../base'
  */
 
 
-function imageCTA({ imageUrl, title, text, ctaAction, ctaColor }) {
+function imageCTA({ imageUrl, title, text, ctaAction, ctaColor=COLORS.danger }) {
   return bubble({
     hero: image(imageUrl),
     body: box({
