@@ -53,7 +53,7 @@ module.exports = async function handlePostback(event) {
     }
   }
 
-  if (data === 'Start Lesson 1') {
+  if (data === 'lesson1') {
     try {
       // ข้อความต้อนรับก่อน carousel
       await axios.post('https://api.line.me/v2/bot/message/push', {
