@@ -23,5 +23,5 @@ app.listen(port, () => {
   console.log(`🚀 Emmo backend listening at http://localhost:${port}`);
 });
 
-const bindTempId = require('./adapters/line/api/bind-temp-id');
-app.use('/', bindTempId); // หรือ '/api' ก็ได้
+const saveNameFromTemp = require('./api/save-name-from-temp');
+app.use(saveNameFromTemp);
