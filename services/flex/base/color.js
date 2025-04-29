@@ -18,7 +18,9 @@ const COLORS = {
     dangerFaded: '#FF440080',
 
     white: '#FFFFFF',
-    transparent: '#FFFFFF00'
+    transparent: '#FFFFFF00',
+
+    grey: '949494'
 };
 
 module.exports = { 

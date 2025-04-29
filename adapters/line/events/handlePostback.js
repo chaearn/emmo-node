@@ -52,16 +52,26 @@ module.exports = async function handlePostback(event) {
       console.error('❌ Error replying to Start postback:', error.response?.data || error.message);
     }
   }
-
+  
   if (data === 'lesson1') {
     try {
       // ข้อความต้อนรับก่อน carousel
       await axios.post('https://api.line.me/v2/bot/message/push', {
         to: userId,
         messages: [
-          { type: 'text', text: 'LEVEL 1' },
-          { type: 'text', text: `${userName} Lesson 1` }
+          // { type: 'text', text: 'LEVEL 1' },
+          { type: 'text', text: `Ok, ${userName} Let's start LV.1: LESSON 1` }
         ]
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${process.env.LINE_CHANNEL_ACCESS_TOKEN}`
+        }
+      });
+
+      await axios.post('https://api.line.me/v2/bot/message/push', {
+        to: userId,
+        messages: [tipsCard]
       }, {
         headers: {
           'Content-Type': 'application/json',
