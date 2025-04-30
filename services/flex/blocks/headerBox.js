@@ -1,6 +1,6 @@
 const { titleText, subtitleText } = require('../base/text');
 const { box } = require('../base/box');
-const { COLORS } = require('../theme/colors');
+const { COLORS } = require('../base/color');
 
 function headerBox({ title, subtitle, backgroundColor = COLORS.brand }) {
   return box({

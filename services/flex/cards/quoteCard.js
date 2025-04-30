@@ -3,7 +3,7 @@ const { quoteBox } = require('../blocks');
 const { headerBox } = require('../blocks');
 const { footerBox } = require('../blocks');
 const { ghostButton } = require('../base');
-const { COLORS } = require('../base/colors');
+const { COLORS } = require('../base/color');
 
 function quoteCard({
   title = 'Kind Replies Collection',

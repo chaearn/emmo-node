@@ -3,7 +3,7 @@ const box = require('./box');
 const image = require('./image');
 const text = require('./text');
 const button = require('./button');
-const colors = require('./colors');
+const colors = require('./color');
 
 module.exports = {
     ...bubble,

@@ -1,4 +1,4 @@
-const { COLORS } = require('../theme/colors');
+const { COLORS } = require('../base');
 const { box } = require('../base');
 const { bodyText } = require('../base');
 
@@ -27,4 +27,4 @@ function quoteBox(
   });
 }
 
-export { quoteBox };
+module.export = { quoteBox };

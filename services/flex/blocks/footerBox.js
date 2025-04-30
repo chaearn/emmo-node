@@ -1,6 +1,6 @@
 const { box } = require('../base/box');
 const { ctaButton } = require('../base/button');
-const { COLORS } = require('../theme/colors');
+const { COLORS } = require('../base');
 
 function footerBox({
   buttons = [],

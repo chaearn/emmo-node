@@ -1,9 +1,9 @@
 const { bubble } = require('../base');
 const { quoteBox } = require('../blocks');
-const { headerBox } = require('../blocks');
+const headerBox = require('../blocks/headerBox');
 const { footerBox } = require('../blocks');
 const { ghostButton } = require('../base');
-const { COLORS } = require('../base/colors');
+const { COLORS } = require('../base/color');
 
 function tipsCard({
   title = 'Mini Tip:',
@@ -32,4 +32,4 @@ function tipsCard({
   });
 }
 
-module.exports = { tipsCard };
+module.exports = tipsCard;

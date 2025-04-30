@@ -1,8 +1,8 @@
 
 
-const { bubble } = require('../../base');
-const { image, titleText, bodyText, ctaButton } = require('../../base');
-const { box, progressBar } = require('../../blocks');
+const { bubble } = require('../base');
+const { image, titleText, bodyText, ctaButton } = require('../base');
+const { box, progressBar } = require('../blocks');
 
 /**
  * Creates a progress card bubble.

@@ -1,4 +1,4 @@
-const { COLORS } = require('../../theme/colors');
+const { COLORS } = require('./color');
 
 function titleText(text, color = COLORS.white) {
     return {

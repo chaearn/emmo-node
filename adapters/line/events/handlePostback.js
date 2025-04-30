@@ -47,7 +47,7 @@ module.exports = async function handlePostback(event) {
         }
       });
 
-      console.log('📩 Replied to Start postback with Level + Carousel');
+      console.log('📩');
     } catch (error) {
       console.error('❌ Error replying to Start postback:', error.response?.data || error.message);
     }
